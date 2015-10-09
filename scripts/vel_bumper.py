@@ -4,7 +4,7 @@ from geometry_msgs.msg import Twist
 from kobuki_msgs.msg import BumperEvent
 
 rospy.init_node('vel_bumper')
-vel_x = rospy.get_param('~vel_x', 0.5)
+vel_x = rospy.get_param('~vel_x', 5.0)
 vel_rot = rospy.get_param('~vel_rot', 1.0)
 pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size = 1)
 
